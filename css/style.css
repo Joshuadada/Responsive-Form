@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,900&display=swap');
+/********Responsive Form using flex, positioning and media query*******/
+/********Mobile view (<750px)********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-image: url(../images/background.png);
+    color: #fff;
+    padding: 30px 30px 60px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+.logo img{
+    width: 80px
+}
+p{
+    line-height: 18px;
+    font-size: 12px;
+    color: #dadada;
+    opacity: 0.5;
+}
+.left-text{
+    margin: 60px 0 40px;
+    text-align: center;
+}
+.left-text h2{
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+form{
+    margin: auto;
+    text-align: center;
+}
+label, input{
+    display: block;
+    margin: auto;
+}
+form .password-label{
+    margin-top: 20px;
+}
+input{
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+input::placeholder{
+    font-size: 12px;
+    opacity: .8;
+}
+input:focus{
+    outline: 0;
+    box-shadow: 0 0 1px #d4d4d4;
+}
+label p{
+    margin-bottom: 8px;
+}
+#login{
+    margin-top: 40px;
+    background: #0077ff;
+    color: white;
+}
+/********Tablet view (>=425px && <768px)********/
+@media screen and (min-width: 425px){
+    input{
+        width: 70%;
+    }
+}
+/********Laptop view (>=768px)********/
+@media screen and (min-width: 768px){
+    .container{
+        display: flex;
+    }
+    .container>div{
+        flex: 1 1 50%;
+    }
+    .right{
+        padding-left: 30px;
+    }
+    form{
+        text-align: left;
+        margin-top: 120px;
+        padding: 20px 40px;
+        border-left: 1px solid #fff;
+    }
+    input, label{
+        padding: 8px;
+        margin-left: 0;
+        border-radius: 5px;
+    }
+    input, #login{
+        width: 220px;
+    }
+    .left{
+        position: relative;
+    }
+    .left-text{
+        text-align: left;
+        position: absolute;
+        top: 32%;
+        left: 19%;
+    }
+    .left-text h2{
+        font-size: 3rem;
+    }
+}
